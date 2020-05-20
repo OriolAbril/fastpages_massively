@@ -1,0 +1,320 @@
+/*-----------------------------------*/
+/*--- IMPORT STYLES FOR FASTPAGES ---*/
+.post img { display: block; vertical-align: top; margin-left: auto; margin-right: auto; }
+
+img.emoji { display: inline !important; vertical-align: baseline !important; }
+
+.post figcaption { text-align: center; font-size: .8rem; font-style: italic; color: light-grey; }
+
+.page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; }
+
+.post-content p, .post-content li { font-size: 20px; color: #515151; }
+
+.post-link { font-weight: normal; }
+
+.post-title { margin-top: .5rem !important; }
+
+li h3, li h4 { margin-top: .05rem !important; margin-bottom: .05rem !important; }
+
+li .post-meta-description { color: #585858; font-size: 15px; margin-top: .05rem !important; margin-bottom: .05rem !important; }
+
+details.description[open] summary::after { content: attr(data-open); }
+
+details.description:not([open]) summary::after { content: attr(data-close); }
+
+.notebook-badge-image { border: 0 !important; }
+
+.footnotes { font-size: 12px !important; }
+
+.footnotes p, .footnotes li { font-size: 12px !important; }
+
+.social-media-list .svg-icon { width: 25px !important; height: 23px !important; }
+
+.anchor-link { opacity: 0; padding-left: 0.375em; \-webkit-text-stroke: 1.75px white; \-webkit-transition: opacity 0.2s ease-in-out 0.1s; \-moz-transition: opacity 0.2s ease-in-out 0.1s; \-ms-transition: opacity 0.2s ease-in-out 0.1s; }
+
+h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .anchor-link, h5:hover .anchor-link, h6:hover .anchor-link { opacity: 1; }
+
+.category-tags { margin-top: .25rem !important; margin-bottom: .25rem !important; font-size: 105%; }
+
+.post-meta-title, .post-meta { margin-top: .25em !important; margin-bottom: .25em !important; font-size: 105%; }
+
+.page-description { margin-top: .5rem !important; margin-bottom: .5rem !important; color: #585858; font-size: 115%; }
+
+.category-tags-icon { font-size: 75% !important; padding-left: 0.375em; opacity: 35%; }
+
+.category-tags-link { color: #bb8181 !important; font-size: 13px !important; }
+
+.js-search-results { padding-top: 0.2rem; }
+
+.search-results-list-item { padding-bottom: 1rem; }
+
+.search-results-list-item .search-result-title { font-size: 16px; color: #d9230f; }
+
+.search-result-rel-url { color: silver; }
+
+.search-results-list-item a { display: block; color: #777; }
+
+.search-results-list-item a:hover, .search-results-list-item a:focus { text-decoration: none; }
+
+.search-results-list-item a:hover .search-result-title { text-decoration: underline; }
+
+.search-result-rel-date { color: #6d788a; font-size: 14px; }
+
+.search-result-preview { color: #777; font-size: 16px; margin-top: .02rem !important; margin-bottom: .02rem !important; }
+
+.search-result-highlight { color: #2e0137; font-weight: bold; }
+
+table { display: block !important; overflow-x: auto; white-space: nowrap; font-size: 75%; border: none; }
+
+table th { text-align: center !important; }
+
+table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
+
+::-webkit-scrollbar { width: 14px; height: 18px; }
+
+::-webkit-scrollbar-thumb { height: 6px; border: 4px solid rgba(0, 0, 0, 0); background-clip: padding-box; -webkit-border-radius: 7px; background-color: #9D9D9D; -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05); }
+
+::-webkit-scrollbar-button { width: 0; height: 0; display: none; }
+
+::-webkit-scrollbar-corner { background-color: transparent; }
+
+.output_text.output_execute_result pre { white-space: pre-wrap; }
+
+@media only screen and (max-width: 900px) { /* for mobile phone and tablet devices */
+  .output_wrapper { overflow: scroll; } }
+
+/*-----------------------------------*/
+/*----- ADD YOUR STYLES BELOW -------*/
+.language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
+
+[class^="language-"]:not(.language-plaintext) pre, [class^="language-"]:not(.language-plaintext) code { background-color: #323443 !important; color: #f8f8f2; }
+
+.language-python + .language-plaintext code { background-color: white !important; }
+
+.language-python + .language-plaintext pre { background-color: white !important; }
+
+.input_area pre, .input_area div { margin-bottom: 2rem !important; margin-top: 1.5rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #323443 !important; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace; border-radius: 5px; font-size: 100%; }
+
+.output_area pre, .output_area div { margin-bottom: 1rem !important; margin-top: 1rem !important; padding-bottom: 0 !important; padding-top: 0 !important; }
+
+.input_area pre { border-left: 5px solid #323443; }
+
+.output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; }
+
+.code_cell table { width: auto; }
+
+/* Dracula Theme v1.2.5 https://github.com/zenorocha/dracula-theme Copyright 2016, All rights reserved Code licensed under the MIT license */
+.highlight { background: #323443 !important; color: #f8f8f2 !important; }
+
+.highlight pre, .highlight code { background: #323443; color: #f8f8f2; }
+
+.highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #e7997a; }
+
+.highlight .go { color: #44475a; }
+
+.highlight .err, .highlight .g, .highlight .l, .highlight .n, .highlight .x, .highlight .ge, .highlight .gr, .highlight .gh, .highlight .gi, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .gt, .highlight .ld, .highlight .no, .highlight .nd, .highlight .pi, .highlight .ni, .highlight .ne, .highlight .nn, .highlight .nx, .highlight .py, .highlight .w, .highlight .bp { color: #f8f8f2; background-color: #323443 !important; }
+
+.highlight .p { font-weight: bold; color: #66d9ef; }
+
+.highlight .ge { text-decoration: underline; }
+
+.highlight .bp { font-style: italic; }
+
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs { color: #6272a4; }
+
+.highlight .kd, .highlight .kt, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #8be9fd; }
+
+.highlight .kd, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { font-style: italic; }
+
+.highlight .fm, .highlight .na, .highlight .nc, .highlight .nf { color: #ace591; }
+
+.highlight .k, .highlight .o, .highlight .cp, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .nt, .highlight .ow { color: #ff79c6; }
+
+.highlight .kc { color: #ace591; }
+
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #bd93f9; }
+
+.highlight .gd { color: #ff5555; }
+
+.nb-badges { padding: 5px; /* this */ }
+
+.nb-badges > div { margin: 5px; /* and that, will result in a 10px gap */ }
+
+/* ========================================================================== Fluid Type as seen on https://madebymike.com.au/writing/fluid-type-calc-examples/ ========================================================================== */
+/* ========================================================================== List Mixins ========================================================================== */
+/* Breakpoint widths */
+/* Fluid type */
+.taxonomy-section { margin-bottom: 2em; padding-bottom: 1em; }
+
+.taxonomy-section:not(:last-child) { border-bottom: solid 1px #444444; }
+
+.taxonomy-section + .taxonomy-section { margin-top: 2em; }
+
+.taxonomy-title { margin-bottom: 0.5em; color: _palette(fg-light); font-family: _font(family); }
+
+.taxonomy-title { font-size: 28px; }
+
+@media screen and (min-width: 320px) { .taxonomy-title { font-size: calc(28px + 4 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { .taxonomy-title { font-size: 32px; } }
+
+.taxonomy-count { color: _palette(fg-light); }
+
+.taxonomy-index { display: grid; grid-column-gap: 2em; grid-template-columns: repeat(2, 1fr); margin: 0; padding: 0; font-family: _font(family); font-size: 0.9em; list-style: none; }
+
+@media (min-width: 1024px) { .taxonomy-index { grid-template-columns: repeat(3, 1fr); } }
+
+.taxonomy-index a { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0.25em 0; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; color: inherit; text-decoration: none; border-bottom: 1px solid #444444; }
+
+.taxonomy-index a:hover { color: _palette(accent); }
+
+.taxonomy-index + .taxonomy-section { margin-top: 3em; }
+
+/* Layout specific adjustments ========================================================================== */
+/* Border radius */
+@media (min-width: 1024px) { .layout--post .entry-content, .layout--page .entry-content { width: span(14 of 16); } }
+
+.layout--about .entry-wrap { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+@media (min-width: 768px) { .layout--about .entry-wrap { -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
+
+@media (min-width: 768px) { .layout--about .entry-content { -ms-flex: 1; flex: 1; } }
+
+.layout--about .entry-sidebar { order: -1; -ms-flex-order: -1; }
+
+@media (min-width: 768px) { .layout--about .entry-sidebar { order: initial; -ms-flex-order: initial; } }
+
+.layout--about .entry-sidebar .author-picture { margin: 0 0 2rem; border-radius: 0.5em; }
+
+@media (min-width: 768px) { .layout--about .entry-sidebar .author-picture { margin: 0 0 0 2rem; } }
+
+@media (min-width: 768px) { .layout--cv .entries .entry-header { width: span(5 of 16); padding-right: gutter(1 of 16); /* remove space after last child element */ }
+  .layout--cv .entries .entry-header > *:last-child { margin-bottom: 0; } }
+
+@media (min-width: 768px) { .layout--cv .entries .entry-content { float: right; width: span(11 of 16); } }
+
+.layout--cv .entry a { color: _palette(accent); }
+
+.layout--cv .entry address { font-style: normal; }
+
+.layout--cv .entry .title, .layout--cv .entry .position, .layout--cv .entry .institution, .layout--cv .entry .language { margin-bottom: 0; }
+
+.layout--cv .entry .date { margin-bottom: 1rem; color: _palette(fg-bold); font-family: _font(family-fixed); font-size: 80%; }
+
+.layout--cv .entry .courses-title, .layout--cv .entry .awarder, .layout--cv .entry .publisher, .layout--cv .entry .level { margin: 1rem 0 0; }
+
+.layout--cv .entry .courses, .layout--cv .entry .keywords { padding-left: 0; list-style: none; }
+
+.layout--cv .taxonomy + .taxonomy { margin-top: 0.5rem; }
+
+.layout--cv .taxonomy .title { display: inline-block; margin-right: 1rem; }
+
+.layout--cv .taxonomy .keywords { display: inline-block; }
+
+/* ========================================================================== Entries (Posts, collection documents, etc.) ========================================================================== */
+/* ========================================================================== Fluid Type as seen on https://madebymike.com.au/writing/fluid-type-calc-examples/ ========================================================================== */
+/* ========================================================================== List Mixins ========================================================================== */
+/* ========================================================================== Clearfix Mixin ========================================================================== */
+.entry { margin-bottom: 2rem; padding-bottom: 2rem; }
+
+.entry::after { display: block; clear: both; content: ''; }
+
+.entry:not(:last-child) { border-bottom: 1px solid _palette(border); }
+
+.entry a { color: inherit; }
+
+.entry-title { margin-bottom: 0.5rem; color: _palette(fg-bold); line-height: inherit; }
+
+.entry-title { font-size: 18px; }
+
+@media screen and (min-width: 320px) { .entry-title { font-size: calc(18px + 6 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { .entry-title { font-size: 24px; } }
+
+.entry-title a { text-decoration: none; }
+
+.entry-image { width: 100%; margin-bottom: 1rem; }
+
+.entry-meta { margin-bottom: 1rem; }
+
+.entry-meta { font-size: 12px; }
+
+@media screen and (min-width: 320px) { .entry-meta { font-size: calc(12px + 4 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { .entry-meta { font-size: 16px; } }
+
+.entry-meta ul { padding-left: 0; list-style: none; }
+
+@media (max-width: 768px) { .entry-meta ul li { display: inline-block; margin-right: 1.5rem; } }
+
+@media (min-width: 768px) { .entry-meta ul li { padding-bottom: 0.5rem; } }
+
+.entry-meta a { color: inherit; }
+
+.entry-meta .byline-item:not(:first-child) { margin-left: 1.5rem; }
+
+.entry-meta .icon { margin-right: 0.5em; fill: _palette(accent); }
+
+/* Entry list ========================================================================== */
+.entries-list .entry-title { word-wrap: break-word; /* break long words that could overflow */ }
+
+.entries-list .entry-title a:hover { color: _palette(accent); }
+
+.entries-list .entry-excerpt { /* normalize font sizes */ /* remove space after last child element */ }
+
+@media (min-width: 768px) { .entries-list .entry-excerpt { width: span(11 of 16); } }
+
+.entries-list .entry-excerpt > * { font-size: 1em; }
+
+.entries-list .entry-excerpt > *:last-child { margin-bottom: 0; }
+
+.entries-list .entry-content { /* remove space after last child element */ }
+
+@media (min-width: 768px) { .entries-list .entry-content { width: span(11 of 16); } }
+
+.entries-list .entry-content > *:last-child { margin-bottom: 0; }
+
+@media (min-width: 768px) { .entries-list .entry-meta { float: right; width: span(5 of 16 last); padding-left: gutter(1 of 16); } }
+
+.entries-list > .summary > p:first-child { font-size: 1.125em; line-height: 1.625; }
+
+/* Entries Grid Layout ========================================================================== */
+.entries-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-gap: 2em; }
+
+.entries-grid .entry { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 0; padding-bottom: 2rem; border-bottom: none; }
+
+.entries-grid .entry-title { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+
+.entries-grid .entry-title { font-size: 18px; }
+
+@media screen and (min-width: 320px) { .entries-grid .entry-title { font-size: calc(18px + 6 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { .entries-grid .entry-title { font-size: 24px; } }
+
+.entries-grid .entry-excerpt, .entries-grid .entry-content { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; /* remove space after last child element */ }
+
+.entries-grid .entry-excerpt > *:last-child, .entries-grid .entry-content > *:last-child { margin-bottom: 0; }
+
+.entries-grid .entry-excerpt { /* normalize font sizes */ }
+
+.entries-grid .entry-excerpt > * { font-size: 1em; }
+
+.entries-grid .entry-meta { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; margin-bottom: 1em; font-size: 0.75em; }
+
+.entries-grid .entry-meta ul li { display: inline-block; margin-right: 1.5rem; }
+
+.entries-grid .more-link { margin-top: -1em; }
+
+.entries-grid .more-link a { text-decoration: none; }
+
+.entry-content > p:first-child { font-size: 1.125em; line-height: 1.625; }
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { color: _palette(fg-bold); }
+
+/* Footnotes */
+.footnotes { margin: 2rem 0; padding-top: 1rem; border-top: 1px solid _palette(border); font-size: 80%; }
+
+/* Read more link */
+.more-link { font-size: 75%; font-weight: bold; text-decoration: none; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,515 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<title>ArviZ customization with rcParams</title>
+<meta name="description" content="Use ArviZ rcParams to get sensible defaults right out of the box">
+
+<link rel="shortcut icon" href="https://oriolabril.github.io/fastpages_massively/images/favicon.ico">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://oriolabril.github.io/fastpages_massively/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="https://oriolabril.github.io/fastpages_massively/assets/css/noscript.css" /></noscript>
+<link rel="stylesheet" href="https://oriolabril.github.io/fastpages_massively/assets/stylesheets/main.css" />
+
+  </head>
+  <body class="is-loading">
+
+    <!-- Wrapper -->
+      <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+          <a href="https://oriolabril.github.io/fastpages_massively/" class="logo">Oriol unraveled</a>
+        </header>
+
+        <!-- Nav -->
+          <nav id="nav">
+
+            <ul class="links">
+  <li class=""><a href="https://oriolabril.github.io/fastpages_massively/">Home</a></li>
+  <li class=""><a href="https://oriolabril.github.io/fastpages_massively/about/">About</a></li>
+  <li class=""><a href="https://oriolabril.github.io/fastpages_massively/blog/">Blog</a></li>
+  <li class=""><a href="https://oriolabril.github.io/fastpages_massively/categories/">Tag Archive</a></li>
+</ul>
+
+<ul class="icons">
+  <li><a href="https://twitter.com/" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+  <li><a href="https://github.com/" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+  <li>
+    
+      <a href="/fastpages_massively/atom.xml" title="Atom Feed" class="icon fa-rss">
+        <span class="label">Subscribe</span>
+      </a>
+    
+  </li>
+</ul>
+
+
+          </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+          <!-- Post -->
+          <section class="post">
+            <p><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ArviZ customization with rcParams</h1><p class="page-description">Use ArviZ rcParams to get sensible defaults right out of the box</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-30T00:00:00-05:00" itemprop="datePublished">
+        Apr 30, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Oriol Abril</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fa fa-tags category-tags-icon"></i></i>
+      
+        <a class="category-tags-link" href="/fastpages_massively/categories/#arviz">arviz</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_massively/categories/#customization">customization</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_massively/categories/#rcparams">rcparams</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="nb-badges" style="display: flex; justify-content: flex-end">
+          <div class="px-2">
+
+    <a href="https://github.com/OriolAbril/fastpages_massively/tree/master/_notebooks/2020-04-30-rcParams.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages_massively/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/OriolAbril/fastpages_massively/master?filepath=_notebooks%2F2020-04-30-rcParams.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_massively/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/OriolAbril/fastpages_massively/blob/master/_notebooks/2020-04-30-rcParams.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_massively/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#About">About </a></li>
+<li class="toc-entry toc-h1"><a href="#Introduction">Introduction </a></li>
+<li class="toc-entry toc-h1"><a href="#Customizing-ArviZ">Customizing ArviZ </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#arvizrc-file">arvizrc file </a></li>
+<li class="toc-entry toc-h2"><a href="#Dynamic-rc-settings">Dynamic rc settings </a></li>
+<li class="toc-entry toc-h2"><a href="#rc_context">rc_context </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#ArviZ-default-settings">ArviZ default settings </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-04-30-rcParams.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Comments are not enabled for the blog, to inquiry further about the contents of the post, ask on <a href="https://github.com/arviz-devs/arviz/issues">ArviZ Issues</a> or <a href="https://discourse.pymc.io/">PyMC Discourse</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="About">
+<a class="anchor" href="#About" aria-hidden="true"><span class="octicon octicon-link"></span></a>About<a class="anchor-link" href="#About"> </a>
+</h1>
+<p>ArviZ not only builds on top of matplotlib's <code>rcParams</code> but also adds its own rcParams instance to handle specific settings. This post will only graze matplotlib's rcParams, which are already detailed in <a href="https://matplotlib.org/1.4.1/users/customizing.html">matplotlib's docs</a>; it will dive into specific ArviZ rcParams.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">
+<a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
+</h1>
+<p>Paraphrasing the description on rcParams in the documentation of matplotlib:</p>
+<blockquote>
+<p>ArviZ uses arvizrc configuration files to customize all kinds of properties, which we call rcParams. You can control the defaults of many properties in ArviZ:data loading mode (lazy or eager), automatically showing generated plots, the default information criteria and so on.
+There are several ways of modifying <code>arviz.rcParams</code> instance, each of them targeted to specific needs.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Customizing-ArviZ">
+<a class="anchor" href="#Customizing-ArviZ" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customizing ArviZ<a class="anchor-link" href="#Customizing-ArviZ"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="arvizrc-file">
+<a class="anchor" href="#arvizrc-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>arvizrc file<a class="anchor-link" href="#arvizrc-file"> </a>
+</h2>
+<p>To define default values on a per user or per project basis, <code>arvizrc</code> file should be used. When imported, ArviZ search for an <code>arvizrc</code> file in several locations sorted below by priority:</p>
+<ul>
+<li><code>$PWD/arvizrc</code></li>
+<li><code>$ARVIZ_DATA/arvizrc</code></li>
+<li>On Linux,<ul>
+<li>
+<code>$XDG_CONFIG_HOME/arviz/arvizrc</code> (if <code>$XDG_CONFIG_HOME</code>
+is defined)</li>
+<li>or <code>$HOME/.config/arviz/arvizrc</code> (if <code>$XDG_CONFIG_HOME</code>
+is not defined)</li>
+</ul>
+</li>
+<li>On other platforms,<ul>
+<li>
+<code>$HOME/.arviz/arvizrc</code> if <code>$HOME</code> is defined</li>
+</ul>
+</li>
+</ul>
+<p>Once one of these files is found, ArviZ stops looking and loads its configuration. If none of them are present, the values hardcoded in ArviZ codebase are used. The file used to set the default values in ArviZ can be obtained with the following command:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">az</span><span class="o">.</span><span class="n">rcparams</span><span class="o">.</span><span class="n">get_arviz_rcfile</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/oriol/.config/arviz/arvizrc
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ArviZ has loaded a file used to set defaults on a per user basis. Unless I use a different rc file in the current directory or modify <code>rcParams</code> as explained above, this configuration will be automatically used every time ArviZ is imported. This can be really useful to define the favourite backend or information criterion, written once in the rc file and ArviZ automatically uses the desired values.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dynamic-rc-settings">
+<a class="anchor" href="#Dynamic-rc-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic rc settings<a class="anchor-link" href="#Dynamic-rc-settings"> </a>
+</h2>
+<p>To set default values on a per file or per project basis, <code>rcParams</code> can also be modified dynamically, either overwritting a specific key:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"data.load"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"eager"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that <code>rcParams</code> is the instance to be modified, exactly like in matplotlib.</p>
+<p>Another option is to define a dictionary with several new defaults and update rcParams all at once.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rc</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"data.load"</span><span class="p">:</span> <span class="s2">"lazy"</span><span class="p">,</span>
+    <span class="s2">"plot.max_subplots"</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s2">"stats.ic_scale"</span><span class="p">:</span> <span class="s2">"negative_log"</span><span class="p">,</span>
+    <span class="s2">"plot.matplotlib.constrained_layout"</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">}</span>
+<span class="n">az</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="rc_context">
+<a class="anchor" href="#rc_context" aria-hidden="true"><span class="octicon octicon-link"></span></a>rc_context<a class="anchor-link" href="#rc_context"> </a>
+</h2>
+<p>Eventually, to temporarily use a different set of defaults, ArviZ also has a <code>rc_context</code> function. Its main difference and advantage is that it is a context manager, therefore, all code executed inside the context will use the defaults defined by <code>rc_context</code> but once we exit the context, everything goes back to normal.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+<span class="n">idata</span> <span class="o">=</span> <span class="n">az</span><span class="o">.</span><span class="n">load_arviz_data</span><span class="p">(</span><span class="s2">"centered_eight"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">az</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">idata</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="s2">"theta"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"stats"</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">az</span><span class="o">.</span><span class="n">rc_context</span><span class="p">({</span><span class="s2">"data.index_origin"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">az</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">idata</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="s2">"theta"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"stats"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">az</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">idata</span><span class="p">,</span> <span class="n">var_names</span><span class="o">=</span><span class="s2">"theta"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"stats"</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>           mean     sd  hpd_3%  hpd_97%
+theta[0]  6.026  5.782  -3.707   17.337
+theta[1]  4.724  4.736  -4.039   13.999
+theta[2]  3.576  5.559  -6.779   13.838
+theta[3]  4.478  4.939  -5.528   13.392
+theta[4]  3.064  4.642  -5.972   11.547
+theta[5]  3.821  4.979  -5.507   13.232
+theta[6]  6.250  5.436  -3.412   16.920
+theta[7]  4.544  5.521  -5.665   15.266
+           mean     sd  hpd_3%  hpd_97%
+theta[1]  6.026  5.782  -3.707   17.337
+theta[2]  4.724  4.736  -4.039   13.999
+theta[3]  3.576  5.559  -6.779   13.838
+theta[4]  4.478  4.939  -5.528   13.392
+theta[5]  3.064  4.642  -5.972   11.547
+theta[6]  3.821  4.979  -5.507   13.232
+theta[7]  6.250  5.436  -3.412   16.920
+theta[8]  4.544  5.521  -5.665   15.266
+           mean     sd  hpd_3%  hpd_97%
+theta[0]  6.026  5.782  -3.707   17.337
+theta[1]  4.724  4.736  -4.039   13.999
+theta[2]  3.576  5.559  -6.779   13.838
+theta[3]  4.478  4.939  -5.528   13.392
+theta[4]  3.064  4.642  -5.972   11.547
+theta[5]  3.821  4.979  -5.507   13.232
+theta[6]  6.250  5.436  -3.412   16.920
+theta[7]  4.544  5.521  -5.665   15.266
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="ArviZ-default-settings">
+<a class="anchor" href="#ArviZ-default-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>ArviZ default settings<a class="anchor-link" href="#ArviZ-default-settings"> </a>
+</h1>
+<p>Here are the default ArviZ settings (also available in <a href="https://github.com/arviz-devs/arviz/blob/master/arvizrc.template">GitHub</a>)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">arviz.rcparams</span> <span class="kn">import</span> <span class="n">RcParams</span><span class="p">,</span> <span class="n">defaultParams</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">RcParams</span><span class="p">([(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">defaultParams</span><span class="o">.</span><span class="n">items</span><span class="p">()]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>data.http_protocol    : https
+data.index_origin     : 0
+data.load             : lazy
+data.save_warmup      : False
+plot.backend          : matplotlib
+plot.bokeh.bounds_x_range: auto
+plot.bokeh.bounds_y_range: auto
+plot.bokeh.figure.dpi : 60
+plot.bokeh.figure.height: 500
+plot.bokeh.figure.width: 500
+plot.bokeh.layout.order: default
+plot.bokeh.layout.sizing_mode: fixed
+plot.bokeh.layout.toolbar_location: above
+plot.bokeh.marker     : Cross
+plot.bokeh.output_backend: webgl
+plot.bokeh.show       : True
+plot.bokeh.tools      : reset,pan,box_zoom,wheel_zoom,lasso_select,undo,save,hover
+plot.matplotlib.constrained_layout: True
+plot.matplotlib.show  : False
+plot.max_subplots     : 40
+plot.point_estimate   : mean
+stats.credible_interval: 0.94
+stats.ic_scale        : log
+stats.information_criterion: loo
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/fastpages_massively/arviz/customization/rcparams/2020/04/30/rcParams.html" hidden></a>
+</article>
+</p>
+          </section>
+
+          <!-- Footer -->
+            <footer>
+              <ul class="actions">
+                <li><a href="https://oriolabril.github.io/fastpages_massively/home" class="button">Home</a></li>
+                <li><a href="https://oriolabril.github.io/fastpages_massively/blog/" class="button">Back to blog</a></li>
+              </ul>
+            </footer>
+          </div>
+
+        <!-- Footer -->
+        <!-- Copyright -->
+<div id="copyright">
+  <ul>
+    <li>&copy; Oriol Abril Pla</li>
+    <li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li>
+    <li>Jekyll Integration by <a href="https://slapform.com">Slapform</a> </li>
+    <li><a href="https://twitter.com/" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+    <li>
+      <a href="/fastpages_massively/atom.xml" title="Atom Feed" class="icon fa-rss" rel="nofollow">
+        <span class="label">Subscribe</span>
+      </a>
+    
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+
+      <!-- Scripts -->
+      <!-- DYN -->
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/jquery.min.js"></script>
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/jquery.scrollex.min.js"></script>
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/jquery.scrolly.min.js"></script>
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/skel.min.js"></script>
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/util.js"></script>
+<script src="https://oriolabril.github.io/fastpages_massively/assets/js/main.js"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+  </body>
+</html>
