@@ -134,14 +134,25 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 .highlight .gd { color: #ff5555; }
 
-.nb-badges { padding: 5px; /* this */ }
+.nb-badges { padding: 3px; /* this */ }
 
-.nb-badges > div { margin: 5px; /* and that, will result in a 10px gap */ }
+.nb-badges > div { margin: 3px; /* and that, will result in a 10px gap */ }
 
 /* ========================================================================== Fluid Type as seen on https://madebymike.com.au/writing/fluid-type-calc-examples/ ========================================================================== */
 /* ========================================================================== List Mixins ========================================================================== */
 /* Breakpoint widths */
 /* Fluid type */
+/* Calculate Modular Scale */
+/* small */
+/* large */
+/* Heading 1 */
+/* Heading 2 */
+/* Heading 3 */
+/* Heading 4 */
+/* Heading 5 */
+/* Heading 6 */
+img { /* Responsive images (ensure images don't scale beyond their parents) */ max-width: 100%; /* part 1: Set a maximum relative to the parent*/ width: auto\9; /* IE7-8 need help adjusting responsive images*/ height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/ border-style: none; /* Remove the border on images inside links in IE 10-.*/ vertical-align: middle; -ms-interpolation-mode: bicubic; }
+
 .taxonomy-section { margin-bottom: 2em; padding-bottom: 1em; }
 
 .taxonomy-section:not(:last-child) { border-bottom: solid 1px #444444; }
@@ -315,6 +326,75 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 /* Read more link */
 .more-link { font-size: 75%; font-weight: bold; text-decoration: none; }
 
-html { font-size: 12pt; }
+/* ========================================================================== Base elements ========================================================================== */
+html { font-size: 12px; }
+
+@media screen and (min-width: 320px) { html { font-size: calc(12px + 4 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { html { font-size: 16px; } }
+
+blockquote, q { color: _palette(fg); font-style: italic; }
+
+blockquote cite, q cite { font-size: 80%; font-style: normal; font-weight: bold; }
+
+blockquote cite::before, q cite::before { padding-right: 0.25rem; content: '\2014'; }
+
+kbd { display: inline-block; margin: 0 0.125em; padding: 0.125em 0.5em; border: 1px solid #cccccc; border-radius: 3px; background-color: #f7f7f7; text-shadow: 0 1px 0 #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 2px #fff; }
+
+h1, h2, h3, h4, h5, h6 { font-family: _font(family-heading); text-rendering: optimizeLegibility; /* enable common ligatures and kerning */ }
+
+h1 { font-size: 20.7385152499px; }
+
+@media screen and (min-width: 320px) { h1 { font-size: calc(20.7385152499px + 24.3992432694 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h1 { font-size: 45.1377585193px; } }
+
+h2 { font-size: 19.436284208px; }
+
+@media screen and (min-width: 320px) { h2 { font-size: calc(19.436284208px + 15.392233168 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h2 { font-size: 34.828517376px; } }
+
+h3 { font-size: 18.215824px; }
+
+@media screen and (min-width: 320px) { h3 { font-size: calc(18.215824px + 8.658032 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h3 { font-size: 26.873856px; } }
+
+h4 { font-size: 17.072px; }
+
+@media screen and (min-width: 320px) { h4 { font-size: calc(17.072px + 3.664 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h4 { font-size: 20.736px; } }
+
+h5 { font-size: 16px; }
+
+@media screen and (min-width: 320px) { h5 { font-size: calc(16px + 0 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h5 { font-size: 16px; } }
+
+h6 { font-size: 14.9953139644px; }
+
+@media screen and (min-width: 320px) { h6 { font-size: calc(14.9953139644px + -2.649634952 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { h6 { font-size: 12.3456790123px; } }
+
+dt { font-weight: bold; }
+
+dt:not(:first-child) { margin-top: 1rem; }
+
+dd { margin: 0; }
+
+pre { font-size: 12px; }
+
+@media screen and (min-width: 320px) { pre { font-size: calc(12px + 2 * ((100vw - 320px) / 960)); } }
+
+@media screen and (min-width: 1280px) { pre { font-size: 14px; } }
+
+figcaption { margin: 0.5rem 0; font-size: 80%; }
+
+a { color: _palette(accent); }
+
+a:hover { color: _palette(invert, accent); }
 
 /*# sourceMappingURL=main.css.map */
