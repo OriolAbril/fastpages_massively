@@ -78,8 +78,7 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 .output_text.output_execute_result pre { white-space: pre-wrap; }
 
-@media only screen and (max-width: 900px) { /* for mobile phone and tablet devices */
-  .output_wrapper { overflow: scroll; } }
+@media only screen and (max-width: 900px) { /* for mobile phone and tablet devices */ .output_wrapper { overflow: scroll; } }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
@@ -201,8 +200,7 @@ img { /* Responsive images (ensure images don't scale beyond their parents) */ m
 
 @media (min-width: 768px) { .layout--about .entry-sidebar .author-picture { margin: 0 0 0 2rem; } }
 
-@media (min-width: 768px) { .layout--cv .entries .entry-header { width: span(5 of 16); padding-right: gutter(1 of 16); /* remove space after last child element */ }
-  .layout--cv .entries .entry-header > *:last-child { margin-bottom: 0; } }
+@media (min-width: 768px) { .layout--cv .entries .entry-header { width: span(5 of 16); padding-right: gutter(1 of 16); /* remove space after last child element */ } .layout--cv .entries .entry-header > *:last-child { margin-bottom: 0; } }
 
 @media (min-width: 768px) { .layout--cv .entries .entry-content { float: right; width: span(11 of 16); } }
 
