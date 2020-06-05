@@ -574,7 +574,7 @@ table.alt tbody tr td { border-color: #eeeeee; }
 /* Wrapper */
 #wrapper { -moz-transition: opacity 0.5s ease; -webkit-transition: opacity 0.5s ease; -ms-transition: opacity 0.5s ease; transition: opacity 0.5s ease; position: relative; z-index: 1; overflow: hidden; }
 
-#wrapper > .bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #212931; background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/fastpages_massively/images/bg.jpg"); background-size: auto,								auto,														100% auto; background-position: center,								center,														top center; background-repeat: repeat,								no-repeat,													no-repeat; background-attachment: scroll,								scroll,														scroll; z-index: -1; }
+#wrapper > .bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #212931; background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/oriol_unraveled/images/bg.jpg"); background-size: auto,								auto,														100% auto; background-position: center,								center,														top center; background-repeat: repeat,								no-repeat,													no-repeat; background-attachment: scroll,								scroll,														scroll; z-index: -1; }
 
 #wrapper > .bg.fixed { position: fixed; width: 100vw; height: 100vh; }
 
