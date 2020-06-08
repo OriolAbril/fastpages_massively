@@ -403,6 +403,8 @@ body, input, select, textarea { line-height: 1.5; }
 
 ul, ol { margin: 0 0 0 0; }
 
-.toc-h2:last-child { margin: 0 0 1.5rem 0; }
+li:last-child { margin: 0 0 1.5rem 0; }
+
+li .toc-h3 { margin: 0 0 0 0; }
 
 /*# sourceMappingURL=main.css.map */
