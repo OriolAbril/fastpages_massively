@@ -21,6 +21,24 @@
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-165101251-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
 
+<!-- Math -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: true}
+        ]}
+        );
+    });
+    </script>
+
 
 
   </head>
@@ -79,7 +97,7 @@
                 <header>
                   <span class="date">30 Apr 2020</span><br />
                   <h2><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/plotting/2020/04/30/plot-trace.html">ArviZ customization: `plot_trace`</a></h2>
-                </header><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/plotting/2020/04/30/plot-trace.html" class="image fit"><img src="https://oriolabril.github.io/oriol_unraveled/images/InferenceDataStructure.png" alt="" /></a><ul class="actions">
+                </header><ul class="actions">
                   <li><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/plotting/2020/04/30/plot-trace.html" class="button">Read more</a></li>
                 </ul>
               </article>
@@ -88,8 +106,26 @@
                 <header>
                   <span class="date">30 Apr 2020</span><br />
                   <h2><a href="https://oriolabril.github.io/oriol_unraveled/arviz/inferencedata/data/2020/04/30/InferenceData.html">Introduction to ArviZ: InferenceData objects</a></h2>
-                </header><a href="https://oriolabril.github.io/oriol_unraveled/arviz/inferencedata/data/2020/04/30/InferenceData.html" class="image fit"><img src="https://oriolabril.github.io/oriol_unraveled/images/InferenceDataStructure.png" alt="" /></a><p><i>Why should you care about `InferenceData` if `az.xyz(pymc3_trace)` and `az.xyz(pystan_fit)` already work?</i></p><ul class="actions">
+                </header><a href="https://oriolabril.github.io/oriol_unraveled/arviz/inferencedata/data/2020/04/30/InferenceData.html" class="image fit"><img src="https://oriolabril.github.io/oriol_unraveled/images/nb/InferenceDataStructure.png" alt="" /></a><p><i>Why should you care about <code>InferenceData</code> if `az.xyz(pymc3_trace)` and `az.xyz(pystan_fit)` already work?</i></p><ul class="actions">
                   <li><a href="https://oriolabril.github.io/oriol_unraveled/arviz/inferencedata/data/2020/04/30/InferenceData.html" class="button">Read more</a></li>
+                </ul>
+              </article>
+            
+              <article>
+                <header>
+                  <span class="date">31 Jul 2019</span><br />
+                  <h2><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/model%20criticism/2019/07/31/loo-pit-tutorial.html">LOO-PIT tutorial</a></h2>
+                </header><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/model%20criticism/2019/07/31/loo-pit-tutorial.html" class="image fit"><img src="https://oriolabril.github.io/oriol_unraveled/images/nb/loo_pit_bias.png" alt="" /></a><p><i>Extend your posterior predictive checks with leave one out probability integral transform</i></p><ul class="actions">
+                  <li><a href="https://oriolabril.github.io/oriol_unraveled/arviz/visualization/model%20criticism/2019/07/31/loo-pit-tutorial.html" class="button">Read more</a></li>
+                </ul>
+              </article>
+            
+              <article>
+                <header>
+                  <span class="date">21 Jun 2019</span><br />
+                  <h2><a href="https://oriolabril.github.io/oriol_unraveled/arviz/model%20comparison/2019/06/21/loo-cv-transformed-data.html">LOO-CV on transformed data</a></h2>
+                </header><a href="https://oriolabril.github.io/oriol_unraveled/arviz/model%20comparison/2019/06/21/loo-cv-transformed-data.html" class="image fit"><img src="https://oriolabril.github.io/oriol_unraveled/images/nb/loo_regression.png" alt="" /></a><p><i>Can different transformations of the data be compared with leave one out cross validation?</i></p><ul class="actions">
+                  <li><a href="https://oriolabril.github.io/oriol_unraveled/arviz/model%20comparison/2019/06/21/loo-cv-transformed-data.html" class="button">Read more</a></li>
                 </ul>
               </article>
             

@@ -399,4 +399,10 @@ a { color: _palette(accent); }
 
 a:hover { color: _palette(invert, accent); }
 
+body, input, select, textarea { line-height: 1.5; }
+
+ul, ol { margin: 0 0 0 0; }
+
+.toc-h2:last-child { margin: 0 0 1.5rem 0; }
+
 /*# sourceMappingURL=main.css.map */
