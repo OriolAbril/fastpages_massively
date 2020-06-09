@@ -405,6 +405,8 @@ ul, ol { margin: 0 0 0 0; }
 
 li:last-child { margin: 0 0 1.5rem 0; }
 
-li .toc-h3 { margin: 0 0 0 0; }
+li .toc-h2, li .toc-h3, li .toc-h4, li .toc-h5 { margin: 0 0 0 0; }
+
+ul.actions li:last-child, ul.icons li:last-child, ul.links li:last-child { margin: 0 0 0 0; }
 
 /*# sourceMappingURL=main.css.map */
