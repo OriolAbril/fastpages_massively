@@ -246,25 +246,25 @@ img { /* Responsive images (ensure images don't scale beyond their parents) */ m
 
 .entry-image { width: 100%; margin-bottom: 1rem; }
 
-.entry-meta { margin-bottom: 1rem; }
+.entry-meta, .entry-times { margin-bottom: 1rem; }
 
-.entry-meta { font-size: 12px; }
+.entry-meta, .entry-times { font-size: 12px; }
 
-@media screen and (min-width: 320px) { .entry-meta { font-size: calc(12px + 4 * ((100vw - 320px) / 960)); } }
+@media screen and (min-width: 320px) { .entry-meta, .entry-times { font-size: calc(12px + 4 * ((100vw - 320px) / 960)); } }
 
-@media screen and (min-width: 1280px) { .entry-meta { font-size: 16px; } }
+@media screen and (min-width: 1280px) { .entry-meta, .entry-times { font-size: 16px; } }
 
-.entry-meta ul { padding-left: 0; list-style: none; }
+.entry-meta ul, .entry-times ul { padding-left: 0; list-style: none; }
 
-@media (max-width: 768px) { .entry-meta ul li { display: inline-block; margin-right: 1.5rem; } }
+@media (max-width: 768px) { .entry-meta ul li, .entry-times ul li { display: inline-block; margin-right: 1.5rem; } }
 
-@media (min-width: 768px) { .entry-meta ul li { padding-bottom: 0.5rem; } }
+@media (min-width: 768px) { .entry-meta ul li, .entry-times ul li { padding-bottom: 0.5rem; } }
 
-.entry-meta a { color: inherit; }
+.entry-meta a, .entry-times a { color: inherit; }
 
-.entry-meta .byline-item:not(:first-child) { margin-left: 1.5rem; }
+.entry-meta .byline-item:not(:first-child), .entry-times .byline-item:not(:first-child) { margin-left: 1.5rem; }
 
-.entry-meta .icon { margin-right: 0.5em; fill: _palette(accent); }
+.entry-meta .icon, .entry-times .icon { margin-right: 0.5em; fill: _palette(accent); }
 
 /* Entry list ========================================================================== */
 .entries-list .entry-title { word-wrap: break-word; /* break long words that could overflow */ }
@@ -408,5 +408,9 @@ li:last-child { margin: 0 0 1.5rem 0; }
 li .toc-h2, li .toc-h3, li .toc-h4, li .toc-h5 { margin: 0 0 0 0; }
 
 ul.actions li:last-child, ul.icons li:last-child, ul.links li:last-child { margin: 0 0 0 0; }
+
+p { margin: .9rem 0 .9rem 0; }
+
+.entry-times ul > li { display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
