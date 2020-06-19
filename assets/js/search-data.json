@@ -63,8 +63,8 @@
       ,"page2": {
           "title": "Blog",
           "content": "",
-          "url": "https://oriolabril.github.io/oriol_unraveled/blog",
-          "relUrl": "/blog",
+          "url": "https://oriolabril.github.io/oriol_unraveled/blog/",
+          "relUrl": "/blog/",
           "date": ""
       }
       

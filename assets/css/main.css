@@ -196,7 +196,7 @@ sup { font-size: 0.8rem; position: relative; top: -0.5rem; }
 
 blockquote { border-left: solid 4px; font-style: italic; margin: 0 0 2rem 0; padding: 0.5rem 0 0.5rem 2rem; }
 
-code { font-family: "Courier New", monospace; font-size: 0.9rem; margin: 0 0.1rem; padding: 0.1rem 0.2rem; }
+code { font-family: "Courier New", monospace; font-size: 80%; margin: 0 0.1rem; padding: 0.1rem 0.2rem; }
 
 pre { -webkit-overflow-scrolling: touch; font-family: "Courier New", monospace; font-size: 0.9rem; margin: 0 0 2rem 0; }
 
