@@ -137,6 +137,8 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 .nb-badges > div { margin: 3px; /* and that, will result in a 10px gap */ }
 
+.output_area pre { border-left: none; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
+
 .ai { border-bottom: none; }
 
 .ai > .label { display: none; }
