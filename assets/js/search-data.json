@@ -62,7 +62,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "I’m a rebel physicist/engineer who loves statistical data analysis. By day, I am currently a Research Assistant on Bayesian Model Selection with David Rossell at UPF, Barcelona. By night I am a core developer of ArviZ a Python package for exploratory analysis of Bayesian models. In addition to data analysis probabilistic modeling, I also love programming and teaching. . I think that the culture in scientific research needs deep changes towards a more collaborative, open and diverse model. I am interested in open science, reproducible research and science communication. I want to pursue a career in probabilistic modeling and statistical research with special emphasis on openness and reproducibility. . In my spare time, I like playing board games and going to the beach to do water activities. I have been sailing and snorkeling regularly since I was little and more recently I added kayaking to the mix too! I generally spend the summer at the Costa Brava. Here I leave you a sneak peak of the views when nobody is around . . Projects . Here are highlighted some projects I contribute to, check out my GitHub profile for a complete list of the projects I contribute to. . ArviZ: Exploratory analysis of Bayesian models in Python or Julia | mombf: Bayesian model selection and averaging for regression and mixtures for non-local and local priors. | exosherlock: Smooth your interactions with the NASA Exoplanet Archive using Python and pandas. | PyMC3/4: Friendly probabilistic programming in Python. | . Publications and presentations . PROBPROG 2020: Coming on autumn 2020 | M. Badenas-Agusti, M. N. Günther, T. Daylan, et al., 2020, HD 191939: Three Sub-Neptunes Transiting a Sun-like Star Only 54 pc Away | D. Foreman-Mackey, W. Farr, M. Sinha, A. Archibald, et al., 2019, emcee v3: A Python ensemble sampling toolkit for affine-invariant MCMC. Get the emcee package code! | . | .",
+          "content": "I’m a rebel physicist/engineer who loves statistical data analysis. By day, I am currently a Research Assistant on Bayesian Model Selection with David Rossell at UPF, Barcelona. By night I am a core developer of ArviZ a Python package for exploratory analysis of Bayesian models. In addition to data analysis probabilistic modeling, I also love programming and teaching. . I think that the culture in scientific research needs deep changes towards a more collaborative, open and diverse model. I am interested in open science, reproducible research and science communication. I want to pursue a career in probabilistic modeling and statistical research with special emphasis on openness and reproducibility. . In my spare time, I like playing board games and going to the beach to do water activities. I have been sailing and snorkeling regularly since I was little and more recently I added kayaking to the mix too! I generally spend the summer at the Costa Brava. Here I leave you a sneak peak of the views when nobody is around . . Projects . PyMCon 2020: PyMCon 2020 is an asynchronous-first virtual conference for the Bayesian community | . Open source work . Here are highlighted some open source projects I contribute to, check out my GitHub profile for a complete list of the projects I contribute to. . ArviZ: Exploratory analysis of Bayesian models in Python or Julia | mombf: Bayesian model selection and averaging for regression and mixtures for non-local and local priors. | exosherlock: Smooth your interactions with the NASA Exoplanet Archive using Python and pandas. | PyMC3/4: Friendly probabilistic programming in Python. | . Talks and conferences . PROBPROG 2020: Coming on autumn 2020 | StanCon 2020: ArviZ, InferenceData, and NetCDF: A unified file format for Bayesians. Slides and video presentation are available at GitHub, the slides are executable thanks to Binder! | . Publications . M. Badenas-Agusti, M. N. Günther, T. Daylan, et al., 2020, HD 191939: Three Sub-Neptunes Transiting a Sun-like Star Only 54 pc Away | D. Foreman-Mackey, W. Farr, M. Sinha, A. Archibald, et al., 2019, emcee v3: A Python ensemble sampling toolkit for affine-invariant MCMC. Get the emcee package code! | . | .",
           "url": "https://oriolabril.github.io/oriol_unraveled/about/",
           "relUrl": "/about/",
           "date": ""
@@ -97,7 +97,6 @@
   
 
   
-  
 
   
   
@@ -109,7 +108,10 @@
   
 
   
-      ,"page13": {
+  
+
+  
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://oriolabril.github.io/oriol_unraveled/robots.txt",
