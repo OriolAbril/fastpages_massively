@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://oriolabril.github.io/oriol_unraveled/arviz/model%20comparison/2019/06/21/loo-cv-transformed-data.html</loc>
+<loc>https://oriolabril.github.io/oriol_unraveled/python/arviz/stan/2019/06/21/loo-cv-transformed-data.html</loc>
 <lastmod>2019-06-21T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://oriolabril.github.io/oriol_unraveled/arviz/visualization/model%20criticism/2019/07/31/loo-pit-tutorial.html</loc>
+<loc>https://oriolabril.github.io/oriol_unraveled/python/arviz/pymc3/2019/07/31/loo-pit-tutorial.html</loc>
 <lastmod>2019-07-31T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://oriolabril.github.io/oriol_unraveled/arviz/customization/rcparams/2020/06/19/rcParams.html</loc>
+<loc>https://oriolabril.github.io/oriol_unraveled/python/arviz/2020/06/19/rcParams.html</loc>
 <lastmod>2020-06-19T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://oriolabril.github.io/oriol_unraveled/arviz/visualization/plotting/2020/06/20/plot-trace.html</loc>
+<loc>https://oriolabril.github.io/oriol_unraveled/python/arviz/matplotlib/2020/06/20/plot-trace.html</loc>
 <lastmod>2020-06-20T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://oriolabril.github.io/oriol_unraveled/blog/communication/2020/07/10/blog.html</loc>
+<loc>https://oriolabril.github.io/oriol_unraveled/jekyll/2020/07/10/blog.html</loc>
 <lastmod>2020-07-10T00:00:00-05:00</lastmod>
 </url>
 <url>
