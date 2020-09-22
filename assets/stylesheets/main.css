@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------------*/
 /*--- IMPORT STYLES FOR FASTPAGES ---*/
 .post img { display: block; vertical-align: top; margin-left: auto; margin-right: auto; }
@@ -127,8 +128,7 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 .input_area pre, .input_area div { margin-bottom: 2rem !important; margin-top: 1.5rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #323443; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace; border-radius: 5px; font-size: 100%; font-weight: 350; }
 
-.output_area pre, .output_area div { margin-bottom: 1rem !important; margin-top: 1rem !important; padding-bottom: 0 !important; padding-top: 0 !important; }
-
+/* .output_area pre, .output_area div { margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0; padding-top: 0; } */
 .input_area pre { border-left: 5px solid #323443; }
 
 .output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; }
@@ -416,5 +416,122 @@ ul.actions li:last-child, ul.icons li:last-child, ul.links li:last-child { margi
 p { margin: .9rem 0 .9rem 0; }
 
 .entry-times ul > li { display: inline-block; }
+
+/* CSS stylesheet for displaying xarray objects in jupyterlab. */
+:root { --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1)); --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54)); --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38)); --xr-border-color: var(--jp-border-color2, #e0e0e0); --xr-disabled-color: var(--jp-layout-color3, #bdbdbd); --xr-background-color: var(--jp-layout-color0, white); --xr-background-color-row-even: var(--jp-layout-color1, white); --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee); }
+
+html[theme=dark], body.vscode-dark { --xr-font-color0: rgba(255, 255, 255, 1); --xr-font-color2: rgba(255, 255, 255, 0.54); --xr-font-color3: rgba(255, 255, 255, 0.38); --xr-border-color: #1F1F1F; --xr-disabled-color: #515151; --xr-background-color: #111111; --xr-background-color-row-even: #111111; --xr-background-color-row-odd: #313131; }
+
+.output_area pre .xr-wrap, .output_area div .xr-wrap { display: block !important; min-width: 300px !important; max-width: 700px !important; }
+
+.output_area pre .xr-text-repr-fallback, .output_area div .xr-text-repr-fallback { /* fallback to plain text repr when CSS is not injected (untrusted notebook) */ display: none !important; }
+
+.output_area pre .xr-header, .output_area div .xr-header { padding-top: 6px !important; padding-bottom: 6px !important; margin-bottom: 4px !important; border-bottom: solid 1px var(--xr-border-color) !important; }
+
+.output_area pre .xr-header > div, .output_area pre .xr-header > ul, .output_area div .xr-header > div, .output_area div .xr-header > ul { display: inline !important; margin-top: 0 !important; margin-bottom: 0 !important; }
+
+.output_area pre .xr-obj-type, .output_area pre .xr-array-name, .output_area div .xr-obj-type, .output_area div .xr-array-name { margin-left: 2px !important; margin-right: 10px !important; }
+
+.output_area pre .xr-obj-type, .output_area div .xr-obj-type { color: var(--xr-font-color2) !important; }
+
+.output_area pre .xr-sections, .output_area div .xr-sections { padding-left: 0 !important; display: grid !important; grid-template-columns: 150px auto auto 1fr 20px 20px !important; line-height: normal !important; }
+
+.output_area pre .xr-section-item, .output_area div .xr-section-item { display: contents !important; }
+
+.output_area pre .xr-section-item input, .output_area div .xr-section-item input { display: none !important; }
+
+.output_area pre .xr-section-item input + label, .output_area div .xr-section-item input + label { color: var(--xr-disabled-color) !important; }
+
+.output_area pre .xr-section-item input:enabled + label, .output_area div .xr-section-item input:enabled + label { cursor: pointer !important; color: var(--xr-font-color2) !important; }
+
+.output_area pre .xr-section-item input:enabled + label:hover, .output_area div .xr-section-item input:enabled + label:hover { color: var(--xr-font-color0) !important; }
+
+.output_area pre .xr-section-summary, .output_area div .xr-section-summary { grid-column: 1 !important; color: var(--xr-font-color2) !important; font-weight: 500 !important; }
+
+.output_area pre .xr-section-summary > span, .output_area div .xr-section-summary > span { display: inline-block !important; padding-left: 0.5em !important; }
+
+.output_area pre .xr-section-summary-in:disabled + label, .output_area div .xr-section-summary-in:disabled + label { color: var(--xr-font-color2) !important; }
+
+.output_area pre .xr-section-summary-in + label:before, .output_area div .xr-section-summary-in + label:before { display: inline-block !important; content: '►' !important; font-size: 11px !important; width: 15px !important; text-align: center !important; }
+
+.output_area pre .xr-section-summary-in:disabled + label:before, .output_area div .xr-section-summary-in:disabled + label:before { color: var(--xr-disabled-color) !important; }
+
+.output_area pre .xr-section-summary-in:checked + label:before, .output_area div .xr-section-summary-in:checked + label:before { content: '▼' !important; }
+
+.output_area pre .xr-section-summary-in:checked + label > span, .output_area div .xr-section-summary-in:checked + label > span { display: none !important; }
+
+.output_area pre .xr-section-summary, .output_area pre .xr-section-inline-details, .output_area div .xr-section-summary, .output_area div .xr-section-inline-details { padding-top: 4px !important; padding-bottom: 4px !important; }
+
+.output_area pre .xr-section-inline-details, .output_area div .xr-section-inline-details { grid-column: 2 / -1 !important; }
+
+.output_area pre .xr-section-details, .output_area div .xr-section-details { display: none !important; grid-column: 1 / -1 !important; margin-bottom: 5px !important; }
+
+.output_area pre .xr-section-summary-in:checked ~ .xr-section-details, .output_area div .xr-section-summary-in:checked ~ .xr-section-details { display: contents !important; }
+
+.output_area pre .xr-array-wrap, .output_area div .xr-array-wrap { grid-column: 1 / -1 !important; display: grid !important; grid-template-columns: 20px auto !important; }
+
+.output_area pre .xr-array-wrap > label, .output_area div .xr-array-wrap > label { grid-column: 1 !important; vertical-align: top !important; }
+
+.output_area pre .xr-preview, .output_area div .xr-preview { color: var(--xr-font-color3) !important; }
+
+.output_area pre .xr-array-preview, .output_area pre .xr-array-data, .output_area div .xr-array-preview, .output_area div .xr-array-data { padding: 0 5px !important; grid-column: 2 !important; }
+
+.output_area pre .xr-array-data, .output_area pre .xr-array-in:checked ~ .xr-array-preview, .output_area div .xr-array-data, .output_area div .xr-array-in:checked ~ .xr-array-preview { display: none !important; }
+
+.output_area pre .xr-array-in:checked ~ .xr-array-data, .output_area pre .xr-array-preview, .output_area div .xr-array-in:checked ~ .xr-array-data, .output_area div .xr-array-preview { display: inline-block !important; }
+
+.output_area pre .xr-dim-list, .output_area div .xr-dim-list { display: inline-block !important; list-style: none !important; padding: 0 !important; margin: 0 !important; }
+
+.output_area pre .xr-dim-list li, .output_area div .xr-dim-list li { display: inline-block !important; padding: 0 !important; margin: 0 !important; }
+
+.output_area pre .xr-dim-list:before, .output_area div .xr-dim-list:before { content: '(' !important; }
+
+.output_area pre .xr-dim-list:after, .output_area div .xr-dim-list:after { content: ')' !important; }
+
+.output_area pre .xr-dim-list li:not(:last-child):after, .output_area div .xr-dim-list li:not(:last-child):after { content: ',' !important; padding-right: 5px !important; }
+
+.output_area pre .xr-has-index, .output_area div .xr-has-index { font-weight: bold !important; }
+
+.output_area pre .xr-var-list, .output_area pre .xr-var-item, .output_area div .xr-var-list, .output_area div .xr-var-item { display: contents !important; }
+
+.output_area pre .xr-var-item > div, .output_area pre .xr-var-item label, .output_area pre .xr-var-item > .xr-var-name span, .output_area div .xr-var-item > div, .output_area div .xr-var-item label, .output_area div .xr-var-item > .xr-var-name span { background-color: var(--xr-background-color-row-even) !important; margin-bottom: 0 !important; }
+
+.output_area pre .xr-var-item > .xr-var-name:hover span, .output_area div .xr-var-item > .xr-var-name:hover span { padding-right: 5px !important; }
+
+.output_area pre .xr-var-list > li:nth-child(odd) > div, .output_area pre .xr-var-list > li:nth-child(odd) > label, .output_area pre .xr-var-list > li:nth-child(odd) > .xr-var-name span, .output_area div .xr-var-list > li:nth-child(odd) > div, .output_area div .xr-var-list > li:nth-child(odd) > label, .output_area div .xr-var-list > li:nth-child(odd) > .xr-var-name span { background-color: var(--xr-background-color-row-odd) !important; }
+
+.output_area pre .xr-var-name, .output_area div .xr-var-name { grid-column: 1 !important; }
+
+.output_area pre .xr-var-dims, .output_area div .xr-var-dims { grid-column: 2 !important; }
+
+.output_area pre .xr-var-dtype, .output_area div .xr-var-dtype { grid-column: 3 !important; text-align: right !important; color: var(--xr-font-color2) !important; }
+
+.output_area pre .xr-var-preview, .output_area div .xr-var-preview { grid-column: 4 !important; }
+
+.output_area pre .xr-var-name, .output_area pre .xr-var-dims, .output_area pre .xr-var-dtype, .output_area pre .xr-preview, .output_area pre .xr-attrs dt, .output_area div .xr-var-name, .output_area div .xr-var-dims, .output_area div .xr-var-dtype, .output_area div .xr-preview, .output_area div .xr-attrs dt { white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; padding-right: 10px !important; }
+
+.output_area pre .xr-var-name:hover, .output_area pre .xr-var-dims:hover, .output_area pre .xr-var-dtype:hover, .output_area pre .xr-attrs dt:hover, .output_area div .xr-var-name:hover, .output_area div .xr-var-dims:hover, .output_area div .xr-var-dtype:hover, .output_area div .xr-attrs dt:hover { overflow: visible !important; width: auto !important; z-index: 1 !important; }
+
+.output_area pre .xr-var-attrs, .output_area pre .xr-var-data, .output_area div .xr-var-attrs, .output_area div .xr-var-data { display: none !important; background-color: var(--xr-background-color) !important; padding-bottom: 5px !important; }
+
+.output_area pre .xr-var-attrs-in:checked ~ .xr-var-attrs, .output_area pre .xr-var-data-in:checked ~ .xr-var-data, .output_area div .xr-var-attrs-in:checked ~ .xr-var-attrs, .output_area div .xr-var-data-in:checked ~ .xr-var-data { display: block !important; }
+
+.output_area pre .xr-var-data > table, .output_area div .xr-var-data > table { float: right !important; }
+
+.output_area pre .xr-var-name span, .output_area pre .xr-var-data, .output_area pre .xr-attrs, .output_area div .xr-var-name span, .output_area div .xr-var-data, .output_area div .xr-attrs { padding-left: 25px !important; }
+
+.output_area pre .xr-attrs, .output_area pre .xr-var-attrs, .output_area pre .xr-var-data, .output_area div .xr-attrs, .output_area div .xr-var-attrs, .output_area div .xr-var-data { grid-column: 1 / -1 !important; }
+
+.output_area pre dl.xr-attrs, .output_area div dl.xr-attrs { padding: 0 !important; margin: 0 !important; display: grid !important; grid-template-columns: 125px auto !important; }
+
+.output_area pre .xr-attrs dt, .output_area pre dd, .output_area div .xr-attrs dt, .output_area div dd { padding: 0 !important; margin: 0 !important; float: left !important; padding-right: 10px !important; width: auto !important; }
+
+.output_area pre .xr-attrs dt, .output_area div .xr-attrs dt { font-weight: normal !important; grid-column: 1 !important; }
+
+.output_area pre .xr-attrs dt:hover span, .output_area div .xr-attrs dt:hover span { display: inline-block !important; background: var(--xr-background-color) !important; padding-right: 10px !important; }
+
+.output_area pre .xr-attrs dd, .output_area div .xr-attrs dd { grid-column: 2 !important; white-space: pre-wrap !important; word-break: break-all !important; }
+
+.output_area pre .xr-icon-database, .output_area pre .xr-icon-file-text2, .output_area div .xr-icon-database, .output_area div .xr-icon-file-text2 { display: inline-block !important; vertical-align: middle !important; width: 1em !important; height: 1.5em !important; stroke-width: 0 !important; stroke: currentColor !important; fill: currentColor !important; }
 
 /*# sourceMappingURL=main.css.map */
